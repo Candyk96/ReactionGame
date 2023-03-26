@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Reaction Game</title>
+    <script src="js/reaction.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+    <div>
+        <table>
+            <tr style="height: 50px">
+                <td style="width: 50%;">Time No.</td>
+                <td>Reaction (s)</td>
+            </tr>
+            <tr>
+                <td>Time 1</td>
+                <td id="time0"></td>
+            </tr>
+            <tr>
+                <td>Time 2</td>
+                <td id="time1"></td>
+            </tr>
+            <tr>
+                <td>Time 3</td>
+                <td id="time2"></td>
+            </tr>
+            <tr>
+                <td>Time 4</td>
+                <td id="time3"></td>
+            </tr>
+            <tr>
+                <td>Time 5</td>
+                <td id="time4"></td>
+            </tr>
+            <tr>
+                <td>Time 6</td>
+                <td id="time5"></td>
+            </tr>
+            <tr>
+                <td>Time 7</td>
+                <td id="time6"></td>
+            </tr>
+            <tr>
+                <td>Time 8</td>
+                <td id="time7"></td>
+            </tr>
+            <tr>
+                <td>Time 9</td>
+                <td id="time8"></td>
+            </tr>
+            <tr>
+                <td>Time 10</td>
+                <td id="time9"></td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="vertical-align:bottom;text-align:left">Average</td>
+                <td style="vertical-align:bottom;text-align:left; color: aqua" id="avg"></td>
+            </tr>
+            <tr>
+                <td>Min</td>
+                <td id="min" style="color: #00e400"></td>
+            </tr>
+            <tr>
+                <td>Max</td>
+                <td id="max" style="color: red"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="center-timer font-timer">
+        <span id="countdown" style="color: red">3</span>
+    </div>
+    <h1 class="gradient-text">Reaction Game</h1>
+    <p id="intro" class="intro-text">Reaction time test. Click on the circle when it appears on the screen as fast as you can! Final result will be the average of 10 times.</p>
+    <p id="gameover" class="gameover-text">Game over!</p>
+    <p id="results" class="result-text"></p>
+    <p id="info" class="info-text">Read more on scientific study of reaction time <a href="https://en.wikipedia.org/wiki/Mental_chronometry">here</a></p>
+    <div id="circle" class="center" onclick="clickCircle()">
+    </div>
+    <button id="start" class="button" onclick="startGame()">Start</button>
+    <button id="newgame" class="button" onclick="startGame()">New Game</button>
+    <canvas id="chart"></canvas>
+    <audio id="audio" src="audio/mixkit-simple-game-countdown-921.wav"></audio>
+    <audio id="audio2" src="audio/mixkit-achievement-bell-600.wav"></audio>
+    <audio id="audio3" src="audio/mixkit-cool-interface-click-tone-2568.wav"></audio>
+</body>
+
+</html>
